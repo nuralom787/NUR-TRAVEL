@@ -20,7 +20,7 @@
 <body class="max-w-7xl mx-auto px-4 bg-white font-raleway">
     <header>
         <!-- Header/Nav Section -->
-        <div class="navbar bg-base-100 px-12">
+        <div class="navbar bg-base-100 md:px-12 lg:px-12">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -59,41 +59,79 @@
     </header>
     <main>
         <!-- Start Banner Section -->
-        <section class="">
+        <section class="banner">
             <!-- Banner! -->
-            <div class="text-white p-36 space-y-6 bg-[url('images/banner.png')] bg-no-repeat bg-center text-center">
-                <h1 class="text-6xl font-extrabold space-y-6">End-to-End Travel with</h1>
-                <h1 class="text-[#53da3d] text-6xl font-extrabold space-y-6">NUR Paribahan</h1>
-                <p>Yes, you can run unit tests and view the results directly within the app. The <br>
-                    integrated testing features allow for a streamlined .</p>
-                <button class="bg-[#53da3d] text-black px-6 py-4 text-xl font-semibold rounded-xl">Buy Ticket</button>
+            <div
+                class="text-white p-6 md:p-36 lg:p-36 lg:space-y-2 bg-[url('images/banner.png')] bg-no-repeat bg-center bg-contain text-center">
+                <h1 class="text-2xl md:text-6xl lg:text-6xl font-extrabold space-y-6">End-to-End Travel with</h1>
+                <h1 class="text-[#53da3d] text-2xl md:text-6xl lg:text-6xl font-extrabold space-y-6">NUR Paribahan</h1>
+                <p class="hidden lg:block">Yes, you can run unit tests and view the results directly within the app. The
+                    <br>
+                    integrated testing features allow for a streamlined .
+                </p>
+                <button
+                    class="bg-[#53da3d] text-black lg:px-6 px-3 lg:py-4 py-2 text-lg lg:text-xl font-semibold rounded-xl">Buy
+                    Ticket</button>
             </div>
             <!-- Our Success! -->
-            <div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, culpa ducimus nemo
-                            distinctio consectetur nisi magni! Explicabo tempore labore quae fugiat possimus laboriosam
-                            inventore? Nihil neque quod necessitatibus exercitationem beatae!</h1>
-                        <p></p>
+            <div class="flex flex-col lg:flex-row justify-center items-center gap-8 mb-10 mt-6 lg:-mt-16">
+                <div
+                    class="bg-white shadow-lg lg:shadow-none border-b-[3px] border-[#1DD100] flex gap-4 rounded-3xl px-9 py-6 w-80 lg:w-72">
+                    <img src="images/people.png" alt="">
+                    <div class="space-y-2">
+                        <h1 class="text-4xl font-bold font-sans">500K+</h1>
+                        <p class="font-sans text-gray-500">Registered users</p>
                     </div>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <h1></h1>
-                        <p></p>
+                <div
+                    class="bg-white shadow-lg lg:shadow-none border-b-[3px] border-[#1DD100] flex gap-4 rounded-3xl px-9 py-6 w-80 lg:w-72">
+                    <img src="images/ticket-cupon.png" alt="">
+                    <div class="space-y-2">
+                        <h1 class="text-4xl font-bold font-sans">1.7lacks</h1>
+                        <p class="font-sans text-gray-500">Tickets sold</p>
                     </div>
                 </div>
-                <div>
-                    <img src="" alt="">
-                    <div>
-                        <h1></h1>
-                        <p></p>
+                <div
+                    class="bg-white shadow-lg lg:shadow-none border-b-[3px] border-[#1DD100] flex gap-4 rounded-3xl px-9 py-6 w-80 lg:w-72">
+                    <img src="images/stoppage.png" alt="">
+                    <div class="space-y-2">
+                        <h1 class="text-4xl font-bold font-sans">80K+</h1>
+                        <p class="font-sans text-gray-500">Rental partners</p>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Start Offer Section -->
+        <section class="offer text-center my-28 space-y-20">
+            <h1 class="font-bold text-4xl font-raleway">Best offers for you</h1>
+            <div class="flex justify-around items-center">
+                <div class="coupon-card flex justify-between items-center bg-gray-600">
+                    <div>
+                        <h1>15% OFF</h1>
+                        <p>on your next purchase</p>
+                        <p>use by January 2024</p>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div>
+                        <h1>NEW15</h1>
+                        <p>Coupon Code</p>
+                    </div>
+                </div>
+                <div class="coupon-card flex justify-between items-center bg-gray-600">
+                    <div>
+                        <h1>20% OFF</h1>
+                        <p>on your next purchase</p>
+                        <p>use by January 2024</p>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div>
+                        <h1>Couple 20</h1>
+                        <p>Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn">See All Offers</button>
         </section>
     </main>
     <footer>

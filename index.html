@@ -68,16 +68,19 @@
         <section class="banner">
             <!-- Banner! -->
             <div
-                class="text-white p-6 md:p-36 lg:p-36 lg:space-y-2 bg-[url('images/banner.png')] bg-no-repeat bg-center bg-contain text-center">
+                class="text-white p-6 md:p-36 lg:p-36 lg:space-y-7 bg-[url('images/banner.png')] bg-no-repeat bg-center bg-contain text-center">
                 <h1 class="text-2xl md:text-6xl lg:text-6xl font-extrabold space-y-6">End-to-End Travel with</h1>
                 <h1 class="text-[#53da3d] text-2xl md:text-6xl lg:text-6xl font-extrabold space-y-6">NUR Paribahan</h1>
                 <p class="hidden lg:block">Yes, you can run unit tests and view the results directly within the app. The
                     <br>
                     integrated testing features allow for a streamlined .
                 </p>
-                <button
-                    class="bg-[#53da3d] text-black lg:px-6 px-3 lg:py-4 py-2 text-lg lg:text-xl font-semibold rounded-xl">Buy
-                    Ticket</button>
+                <div class="">
+                    <a href="#ticket-info"
+                        class="bg-[#53da3d] text-black lg:px-6 px-3 lg:py-4 py-2 text-lg lg:text-xl font-semibold rounded-xl">
+                        Buy Ticket
+                    </a>
+                </div>
             </div>
             <!-- Our Success! -->
             <div class="flex flex-col lg:flex-row justify-center items-center gap-8 mb-10 mt-6 lg:-mt-16">
@@ -133,7 +136,7 @@
                     </div>
                     <img class="h-full lg:h-52" src="images/cupon-devider.png" alt="">
                     <div class="font-raleway px-3 space-y-2 w-28 lg:w-44">
-                        <h1 class="font-extrabold text-xl lg:text-2xl">Couple 20</h1>
+                        <h1 class="font-extrabold text-xl lg:text-2xl">couple20</h1>
                         <p class="font-bold text-lg text-gray-600">Coupon Code</p>
                     </div>
                 </div>
@@ -154,7 +157,7 @@
             </div>
 
             <!-- Ticket Information -->
-            <div class="bg-white flex flex-col lg:flex-row items-center rounded-3xl mt-12">
+            <div id="ticket-info" class="bg-white flex flex-col lg:flex-row items-center rounded-3xl mt-12">
                 <div class="lg:px-7 py-5 border-b-2 border-dashed lg:border-0">
                     <div class="flex flex-col lg:flex-row justify-between items-center pb-6 gap-8 lg:gap-28">
                         <div class="flex flex-col lg:flex-row justify-start items-center gap-3">
@@ -167,7 +170,7 @@
                         <div
                             class="flex justify-center items-center font-poppins gap-1 bg-[#1DD10026] text-[#1DD100] px-5 py-3 rounded-xl">
                             <img src="images/seat-green.png" alt="">
-                            <span>40</span>
+                            <span id="seat-left">40</span>
                             <span>Seats Left</span>
                         </div>
                     </div>
@@ -210,7 +213,8 @@
                     <div class="flex justify-between items-center">
                         <div class="flex items-center gap-2">
                             <img src="images/seat-gray.png" alt="">
-                            <p class="font-poppins text-lg font-medium text-[#03071280]">Available</p>
+                            <p class="font-poppins text-lg font-medium text-[#03071280]">Available
+                            </p>
                         </div>
                         <div class="flex items-center gap-2">
                             <img src="images/seat-green-filled.png" alt="">
@@ -234,15 +238,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">A</span>
                                     </div>
-                                    <button id="A1"
+                                    <button onclick="SelectSeat(event)" id="A1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">A1</button>
-                                    <button id="A2"
+                                    <button onclick="SelectSeat(event)" id="A2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">A2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="A3"
+                                    <button onclick="SelectSeat(event)" id="A3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">A3</button>
-                                    <button id="A4"
+                                    <button onclick="SelectSeat(event)" id="A4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">A4</button>
                                 </div>
                             </div>
@@ -251,15 +255,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">B</span>
                                     </div>
-                                    <button id="B1"
+                                    <button onclick="SelectSeat(event)" id="B1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">B1</button>
-                                    <button id="B2"
+                                    <button onclick="SelectSeat(event)" id="B2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">B2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="B3"
+                                    <button onclick="SelectSeat(event)" id="B3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">B3</button>
-                                    <button id="B4"
+                                    <button onclick="SelectSeat(event)" id="B4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">B4</button>
                                 </div>
                             </div>
@@ -268,15 +272,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">C</span>
                                     </div>
-                                    <button id="C1"
+                                    <button onclick="SelectSeat(event)" id="C1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">C1</button>
-                                    <button id="C2"
+                                    <button onclick="SelectSeat(event)" id="C2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">C2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="C3"
+                                    <button onclick="SelectSeat(event)" id="C3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">C3</button>
-                                    <button id="C4"
+                                    <button onclick="SelectSeat(event)" id="C4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">C4</button>
                                 </div>
                             </div>
@@ -285,15 +289,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">D</span>
                                     </div>
-                                    <button id="D1"
+                                    <button onclick="SelectSeat(event)" id="D1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">D1</button>
-                                    <button id="D2"
+                                    <button onclick="SelectSeat(event)" id="D2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">D2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="D3"
+                                    <button onclick="SelectSeat(event)" id="D3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">D3</button>
-                                    <button id="D4"
+                                    <button onclick="SelectSeat(event)" id="D4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">D4</button>
                                 </div>
                             </div>
@@ -302,15 +306,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">E</span>
                                     </div>
-                                    <button id="E1"
+                                    <button onclick="SelectSeat(event)" id="E1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">E1</button>
-                                    <button id="E2"
+                                    <button onclick="SelectSeat(event)" id="E2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">E2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="E3"
+                                    <button onclick="SelectSeat(event)" id="E3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">E3</button>
-                                    <button id="E4"
+                                    <button onclick="SelectSeat(event)" id="E4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">E4</button>
                                 </div>
                             </div>
@@ -319,15 +323,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">F</span>
                                     </div>
-                                    <button id="F1"
+                                    <button onclick="SelectSeat(event)" id="F1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">F1</button>
-                                    <button id="F2"
+                                    <button onclick="SelectSeat(event)" id="F2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">F2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="F3"
+                                    <button onclick="SelectSeat(event)" id="F3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">F3</button>
-                                    <button id="F4"
+                                    <button onclick="SelectSeat(event)" id="F4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">F4</button>
                                 </div>
                             </div>
@@ -336,15 +340,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">G</span>
                                     </div>
-                                    <button id="G1"
+                                    <button onclick="SelectSeat(event)" id="G1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">G1</button>
-                                    <button id="G2"
+                                    <button onclick="SelectSeat(event)" id="G2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">G2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="G3"
+                                    <button onclick="SelectSeat(event)" id="G3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">G3</button>
-                                    <button id="G4"
+                                    <button onclick="SelectSeat(event)" id="G4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">G4</button>
                                 </div>
                             </div>
@@ -353,15 +357,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">H</span>
                                     </div>
-                                    <button id="H1"
+                                    <button onclick="SelectSeat(event)" id="H1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">H1</button>
-                                    <button id="H2"
+                                    <button onclick="SelectSeat(event)" id="H2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">H2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="H3"
+                                    <button onclick="SelectSeat(event)" id="H3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">H3</button>
-                                    <button id="H4"
+                                    <button onclick="SelectSeat(event)" id="H4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">H4</button>
                                 </div>
                             </div>
@@ -370,15 +374,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">I</span>
                                     </div>
-                                    <button id="I1"
+                                    <button onclick="SelectSeat(event)" id="I1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">I1</button>
-                                    <button id="I2"
+                                    <button onclick="SelectSeat(event)" id="I2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">I2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="I3"
+                                    <button onclick="SelectSeat(event)" id="I3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">I3</button>
-                                    <button id="I4"
+                                    <button onclick="SelectSeat(event)" id="I4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">I4</button>
                                 </div>
                             </div>
@@ -387,15 +391,15 @@
                                     <div class="hidden lg:block lg:w-8 text-center">
                                         <span class="text-[#03071280] text-lg font-medium w-6">J</span>
                                     </div>
-                                    <button id="J1"
+                                    <button onclick="SelectSeat(event)" id="J1"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">J1</button>
-                                    <button id="J2"
+                                    <button onclick="SelectSeat(event)" id="J2"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">J2</button>
                                 </div>
                                 <div class="space-x-2 lg:space-x-5">
-                                    <button id="J3"
+                                    <button onclick="SelectSeat(event)" id="J3"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">J3</button>
-                                    <button id="J4"
+                                    <button onclick="SelectSeat(event)" id="J4"
                                         class="btn w-[4.5rem] lg:w-[6.5rem] text-[#03071280] font-medium text-lg px-6 lg:px-10 py-2 lg:py-3">J4</button>
                                 </div>
                             </div>
@@ -413,12 +417,12 @@
                         <div class="bg-[#F7F8F8] rounded-xl px-6 py-4">
 
                             <!-- Booked Ticket Info -->
-                            <div class="border-b border-[#03071233]">
-                                <table class="table">
+                            <div>
+                                <table id="table" class="table">
                                     <thead class="border-b-2 border-dashed">
                                         <tr class="">
                                             <th class="px-0 py-4 font-medium text-base text-[#030712]">Seat
-                                                <span
+                                                <span id="selected-seat"
                                                     class="text-white bg-[#1DD100] font-bold text-xs rounded-md px-2 ml-1">
                                                     0
                                                 </span>
@@ -428,27 +432,31 @@
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr class="">
+                                    <!-- <tbody id="table-body"> -->
+                                    <!-- <tr class="border-b border-[#03071233]">
                                             <td class="px-0 py-4 text-base text-[#03071299]">C2</td>
                                             <td class="px-0 py-4 pl-12 text-base text-[#03071299]">Economy</td>
                                             <td class="text-right px-0 py-4 text-base text-[#03071299]">500</td>
-                                        </tr>
-                                    </tbody>
+                                        </tr> -->
+                                    <!-- </tbody> -->
                                 </table>
                             </div>
 
                             <!-- Total Amount Calculation -->
                             <div class="flex justify-between items-center">
                                 <p class="px-0 py-3 font-medium text-base text-[#030712]">Total Price</p>
-                                <p class="px-0 py-3 font-medium text-base text-[#030712]">BDT 0</p>
+                                <p class="px-0 py-3 font-medium text-base text-[#030712]">
+                                    BDT
+                                    <span id="total-price">0</span>
+                                </p>
                             </div>
 
                             <!-- Discount Coupon Apply Option -->
                             <div class="bg-white px-0 lg:px-2 py-2 my-2 rounded-xl lg:space-x-3">
-                                <input class="text-sm px-2 py-2 mx-3 outline-0" type="text"
+                                <input id="coupon-input" class="text-sm px-2 py-2 mx-3 outline-0" type="text"
                                     placeholder="Have any coupon?">
-                                <button class="px-4 py-2 bg-[#1DD100] text-white text-base font-semibold rounded-lg">
+                                <button onclick="applyCoupon()"
+                                    class="px-4 py-2 bg-[#1DD100] text-white text-base font-semibold rounded-lg">
                                     Apply
                                 </button>
                             </div>
@@ -456,7 +464,10 @@
                             <!-- Grand Total Calculation -->
                             <div class="flex justify-between items-center">
                                 <p class="px-0 py-3 font-medium text-base text-[#030712]">Grand Total</p>
-                                <p class="px-0 py-3 font-medium text-base text-[#030712]">BDT 0</p>
+                                <p class="px-0 py-3 font-medium text-base text-[#030712]">
+                                    BDT
+                                    <span id="grand-total">0</span>
+                                </p>
                             </div>
                         </div>
 

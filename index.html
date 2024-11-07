@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -64,6 +64,28 @@
 
     <!-- Main -->
     <main>
+        <!-- Modal -->
+        <dialog id="modal" class="modal">
+            <!-- <div class="w-4/5 lg:w-2/4 h-3/5 lg:h-3/4 bg-white px-6 py-12 rounded-2xl overflow-y-auto"> -->
+            <div class="modal-box w-11/12 max-w-5xl py-14">
+                <div class="text-center space-y-5">
+                    <img class="items-center mx-auto" src="images/success.png" alt="">
+                    <h1 class="font-bold font-poppins text-2xl text-[#27AE60]">Success</h1>
+                    <p class="font-medium font-poppins text-xl text-[#4A4A4A]">
+                        Thank you for Booking Our Bus Seats. <br>
+                        We are working hard to find the best service and deals for you.
+                    </p>
+                    <p class="font-light font-poppins text-xl text-[#4A4A4A]">Shortly you will find a confirmation in
+                        your email.</p>
+                    <div>
+                        <a class="bg-[#27AE60] text-white px-28 py-4 rounded-full font-semibold text-xl" href="/">
+                            Continue
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+
         <!-- Start Banner Section -->
         <section class="banner">
             <!-- Banner! -->
@@ -453,10 +475,10 @@
 
                             <!-- Discount Coupon Apply Option -->
                             <div class="bg-white px-0 lg:px-2 py-2 my-2 rounded-xl lg:space-x-3">
-                                <input id="coupon-input" class="text-sm px-2 py-2 mx-3 outline-0" type="text"
+                                <input id="coupon-input" class="text-sm px-1 lg:px-2 py-2 mx-3 outline-0" type="text"
                                     placeholder="Have any coupon?">
-                                <button onclick="applyCoupon()"
-                                    class="px-4 py-2 bg-[#1DD100] text-white text-base font-semibold rounded-lg">
+                                <button id="coupon-apply-btn" onclick="applyCoupon()"
+                                    class="btn-disabled px-4 py-2 bg-[#1DD100] text-white text-base font-semibold rounded-lg">
                                     Apply
                                 </button>
                             </div>
@@ -481,13 +503,15 @@
                             <h1 class="px-0 py-3 font-semibold text-base text-[#030712]">Phone Number <span
                                     class="text-red-700">*</span>
                             </h1>
-                            <input class="w-full px-5 py-4 mb-2 border border-gray-400 outline-none rounded-xl"
-                                type="text" placeholder="Enter Your Phone Number">
+                            <input onkeyup="activeNextBtn()" id="passenger-number"
+                                class="w-full px-5 py-4 mb-2 border border-gray-400 outline-none rounded-xl"
+                                type="number" placeholder="Enter Your Phone Number">
                             <h1 class="px-0 py-3 font-semibold text-base text-[#030712]">Email ID</h1>
                             <input class="w-full px-5 py-4 mb-2 border border-gray-400 outline-none rounded-xl"
-                                type="text" placeholder="Enter Your Email Id">
-                            <button
-                                class="px-5 py-4 my-3 rounded-xl text-white bg-[#1DD100] font-extrabold text-xl font-raleway w-full">
+                                type="email" placeholder="Enter Your Email Id">
+
+                            <button id="next-btn" onclick="modal.showModal()"
+                                class="btn-disabled px-5 py-4 my-3 rounded-xl text-white bg-[#1DD100] font-extrabold text-xl font-raleway w-full">
                                 Next
                             </button>
                             <div class="text-center space-x-5">

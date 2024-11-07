@@ -20,6 +20,8 @@
 </head>
 
 <body class="max-w-7xl mx-auto px-4 bg-white font-raleway">
+
+    <!-- Header -->
     <header>
         <!-- Header/Nav Section -->
         <div class="navbar bg-base-100 md:px-12 lg:px-12">
@@ -40,7 +42,7 @@
                         <li>Search</li>
                     </ul>
                 </div>
-                <h1 class="text-4xl font-extrabold font-raleway">Nur Ticket</h1>
+                <h1 class="text-2xl lg:text-4xl font-bold lg:font-extrabold font-raleway">Nur Ticket</h1>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1 space-x-10">
@@ -59,6 +61,8 @@
             </div>
         </div>
     </header>
+
+    <!-- Main -->
     <main>
         <!-- Start Banner Section -->
         <section class="banner">
@@ -400,8 +404,8 @@
                 </div>
 
                 <!-- Summery Section Start -->
-                <div class="font-raleway w-2/5 pl-8 space-y-4">
-                    <h1 class="font-semibold text-2xl">Summery</h1>
+                <div class="font-raleway w-full lg:w-2/5 p-0 lg:pl-8 space-y-4">
+                    <h1 class="font-semibold text-2xl text-center lg:text-start mt-10 lg:mt-0">Summery</h1>
                     <hr class="border border-dashed">
 
                     <!-- Summery Section body Start -->
@@ -441,7 +445,7 @@
                             </div>
 
                             <!-- Discount Coupon Apply Option -->
-                            <div class="bg-white px-2 py-2 my-2 rounded-xl space-x-3">
+                            <div class="bg-white px-0 lg:px-2 py-2 my-2 rounded-xl lg:space-x-3">
                                 <input class="text-sm px-2 py-2 mx-3 outline-0" type="text"
                                     placeholder="Have any coupon?">
                                 <button class="px-4 py-2 bg-[#1DD100] text-white text-base font-semibold rounded-lg">
@@ -487,25 +491,30 @@
             </div>
         </section>
     </main>
-    <footer class="hidden font-poppins bg-[#030712] p-20">
-        <div class="flex justify-between items-center text-white">
+
+    <!-- Footer -->
+    <footer class="font-poppins bg-[#030712] p-8 lg:p-20">
+        <div
+            class="flex flex-col lg:flex-row justify-between items-start lg:items-center text-white space-y-8 lg:space-y-0">
             <div>
                 <h1 class="font-raleway font-extrabold text-4xl mb-4">Nur Ticket</h1>
-                <p class="text-lg text-[#FFFFFFCC]">NUR-Ticket is a digital platform to make your <br> daily commuting
+                <p class="text-lg text-[#FFFFFFCC]">NUR-Ticket is a digital platform to make your <br
+                        class="hidden lg:block"> daily commuting
                     better.</p>
             </div>
             <div>
-                <h1 class="font-raleway font-semibold text-xl mb-4 text-right">Download our app</h1>
+                <h1 class="font-raleway font-semibold text-xl mb-4 lg:text-right">Download our app</h1>
                 <img class="border border-gray-600 rounded-lg" src="images/playstore.jpg" alt="">
             </div>
         </div>
         <hr class="border border-gray-600 border-dashed mt-10 mb-8">
-        <div class="flex justify-between items-center text-[#FFFFFFCC]">
-            <span>@all rights reserved, NUR-Ticket services limited.2024</span>
-            <div class="space-x-5">
-                <span>Terms & condition</span>
-                <span>Return & refund policy</span>
-                <span>Privacy policy</span>
+        <div
+            class="flex flex-col-reverse lg:flex-row justify-between lg:items-center gap-8 lg:gap-0 space-y-4 lg:space-y-0 text-[#FFFFFFCC]">
+            <span class="text-center lg:text-start">@all rights reserved, NUR-Ticket services limited.2024</span>
+            <div class="lg:space-x-5">
+                <span class="block lg:inline">Terms & condition</span>
+                <span class="block lg:inline">Return & refund policy</span>
+                <span class="block lg:inline">Privacy policy</span>
             </div>
         </div>
     </footer>

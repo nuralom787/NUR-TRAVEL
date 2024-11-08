@@ -1,5 +1,7 @@
 const seatLeft = document.getElementById("seat-left");
 const selectedSeat = document.getElementById("selected-seat")
+// discount
+// discount-price
 
 
 // Seat Select Function.
@@ -83,7 +85,6 @@ function increaseSeatSelected() {
 };
 
 
-
 // Add Selected Seat Info Function.
 function addSelectedSeatInfo(event) {
     const innerText = event.target.innerText;
@@ -107,7 +108,6 @@ function removeSelectedSeatInfo(event) {
 };
 
 
-
 // Calculate Total Amount.
 function calculateTotalAmount(parameter) {
     const totalPrice = document.getElementById("total-price");
@@ -121,16 +121,27 @@ function calculateTotalAmount(parameter) {
     }
     totalPrice.innerText = newTotal;
     grandPrice.innerText = newTotal;
+
+    // Find Discount Body
+    const discountBody = document.getElementById("discount");
+    discountBody.classList.add("hidden");
+
+    // Check Discountable Price.
     if (parseInt(totalPrice.innerText) === 2200) {
         const couponApplyBtn = document.getElementById("coupon-apply-btn");
         couponApplyBtn.classList.remove("btn-disabled");
-    } else {
+        const couponSection = document.getElementById("coupon-section");
+        couponSection.classList.remove("hidden");
+    }
+    else if (parseInt(totalPrice.innerText) > 0) {
+        const couponApplyBtn = document.getElementById("coupon-apply-btn");
+        couponApplyBtn.classList.add("btn-disabled");
+    }
+    else {
         const couponApplyBtn = document.getElementById("coupon-apply-btn");
         couponApplyBtn.classList.add("btn-disabled");
     }
 };
-
-
 
 
 // Apply Discount Coupon.
@@ -142,16 +153,36 @@ function applyCoupon() {
         const priceInt = parseInt(grandPrice.innerText);
         const discount = priceInt * 15 / 100;
         grandPrice.innerText = priceInt - discount;
+        // Find Apply Coupon Button
         const couponApplyBtn = document.getElementById("coupon-apply-btn");
         couponApplyBtn.classList.add("btn-disabled");
+        // Find Coupon Section
+        const couponSection = document.getElementById("coupon-section");
+        couponSection.classList.add("hidden");
+        // Find Discount Body
+        const discountBody = document.getElementById("discount");
+        discountBody.classList.remove("hidden");
+        // Find Discount price
+        const discountPrice = document.getElementById("discount-price");
+        discountPrice.innerText = discount;
     }
     else if (inputValue === "couple20") {
         const grandPrice = document.getElementById("grand-total");
         const priceInt = parseInt(grandPrice.innerText);
         const discount = priceInt * 20 / 100;
         grandPrice.innerText = priceInt - discount;
+        // Find Apply Coupon Button
         const couponApplyBtn = document.getElementById("coupon-apply-btn");
         couponApplyBtn.classList.add("btn-disabled");
+        // Find Coupon Section
+        const couponSection = document.getElementById("coupon-section");
+        couponSection.classList.add("hidden");
+        // Find Discount Body
+        const discountBody = document.getElementById("discount");
+        discountBody.classList.remove("hidden");
+        // Find Discount price
+        const discountPrice = document.getElementById("discount-price");
+        discountPrice.innerText = discount;
     }
     else {
         return alert("Invalid Coupon Code!!")
